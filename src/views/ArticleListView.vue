@@ -3,14 +3,14 @@
         <el-table :data="tableData" style="width: 100%">
             <el-table-column label="Title">
                 <template #default="scope">
-                    <router-link :to="{ name:'article', query:{ pk:scope.row.id } }">
-                        <a href="">{{ scope.row.title }}</a>
+                    <router-link :to="{ name:'ArticleContent', query:{ pk:scope.row.id } }">
+                        <strong>{{ scope.row.title }}</strong>
                     </router-link>
                 </template>
             </el-table-column>
-            <el-table-column prop="create_at" label="Create_at"/>
+            <el-table-column prop="create_at" label="CreateAt"/>
             <el-table-column prop="category.title" label="Category"/>
-            <el-table-column prop="update_at" label="UpdateAt" width="120"/>
+            <el-table-column prop="update_at" label="UpdateAt"/>
         </el-table>
     </div>
 </template>

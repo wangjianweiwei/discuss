@@ -1,11 +1,16 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
-import Article from '../views/ArticleListView.vue'
+import {createRouter, createWebHistory} from 'vue-router'
+import ArticleListView from '../views/ArticleListView.vue'
 
 const routes = [
     {
         path: '/',
         name: 'articles',
-        component: Article
+        component: ArticleListView,
+    },
+    {
+        path: "/content",
+        name: "ArticleContent",
+        component: () => import('../views/ArticleView.vue')
     },
     {
         path: '/tools',
@@ -19,16 +24,11 @@ const routes = [
         path: '/demos',
         name: 'demos',
         component: () => import(/* webpackChunkName: "about" */ '../views/DemosListView.vue')
-    },
-    {
-        path: '/article',
-        name: 'article',
-        component: () => import('../views/ArticleView.vue')
-    },
+    }
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes
 })
 
