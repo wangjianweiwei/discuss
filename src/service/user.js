@@ -14,6 +14,6 @@ export function getArticle(pk) {
 }
 
 
-export function updateArticle(id, content) {
+export function saveArticle(id, content) {
     return axios.put(`article/${id}`, {content: content})
 }

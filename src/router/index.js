@@ -8,9 +8,14 @@ const routes = [
         component: ArticleListView,
     },
     {
-        path: "/content",
-        name: "ArticleContent",
-        component: () => import('../views/ArticleView.vue')
+        path: "/content/editor",
+        name: "ArticleEditor",
+        component: () => import('../views/ArticleEditorView.vue')
+    },
+    {
+        path: "/content/preview",
+        name: "ArticlePreview",
+        component: () => import('../views/ArticleEditorView.vue')
     },
     {
         path: '/tools',

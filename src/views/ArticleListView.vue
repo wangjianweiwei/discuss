@@ -3,7 +3,7 @@
         <el-table :data="tableData" style="width: 100%">
             <el-table-column label="Title">
                 <template #default="scope">
-                    <router-link :to="{ name:'ArticleContent', query:{ pk:scope.row.id } }">
+                    <router-link :to="{ name:'ArticleEditor', query:{ pk:scope.row.id } }">
                         <strong>{{ scope.row.title }}</strong>
                     </router-link>
                 </template>
