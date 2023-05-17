@@ -1,10 +1,10 @@
 <template>
     <nav>
-        <router-link to="/">Article</router-link>
+        <router-link to="/"> Articles </router-link>
         |
-        <router-link to="/tools">Tools</router-link>
+        <router-link to="/tools"> Tools </router-link>
         |
-        <router-link to="/demos">Demos</router-link>
+        <router-link to="/demos"> Demos </router-link>
     </nav>
     <router-view/>
 </template>
@@ -27,7 +27,7 @@ nav a {
     color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
+.router-link-exact-active {
     color: #42b983;
 }
 

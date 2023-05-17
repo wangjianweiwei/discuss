@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <el-table :data="tableData" style="width: 100%">
-            <el-table-column label="Title">
+            <el-table-column label="Title" @click="tiao">
                 <template #default="scope">
                     <router-link :to="{ name:'ArticleEditor', query:{ pk:scope.row.id } }">
                         <strong>{{ scope.row.title }}</strong>
